@@ -1,6 +1,19 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            create<MavenPublication>("maven") {
+                groupId = "com.github.SyedAbdullahHashmi"
+                artifactId = "Ellipsize_TextView"
+                version = "1.0.4"
+            }
+        }
+    }
 }
 
 android {
