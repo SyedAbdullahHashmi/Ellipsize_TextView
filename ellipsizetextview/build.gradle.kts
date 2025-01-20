@@ -6,11 +6,33 @@ plugins {
 
 publishing {
     publications {
-        create<MavenPublication>("mavenJava") {
-            create<MavenPublication>("maven") {
-                groupId = "com.github.SyedAbdullahHashmi"
-                artifactId = "Ellipsize_TextView"
-                version = "1.0.4"
+        create<MavenPublication>("release") {
+            groupId = "com.github.SyedAbdullahHashmi"
+            artifactId = "Ellipsize_TextView"
+            version = "1.0.4"
+
+            pom {
+                name.set("LibApp")
+                description.set("A custom TextView for Android that ellipsizes each line individually.")
+                url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("SyedAbdullahHashmi")
+                        name.set("Syed Abdullah Hashmi")
+                        email.set("abdullah.hashmi24@gmail.com")
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/SyedAbdullahHashmi/Ellipsize_TextView.git")
+                    developerConnection.set("scm:git:ssh://github.com:SyedAbdullahHashmi/Ellipsize_TextView.git")
+                    url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
+                }
             }
         }
     }
