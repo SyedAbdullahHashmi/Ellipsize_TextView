@@ -43,9 +43,14 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
-    publishing{
-        singleVariant("release") {
-            withSourcesJar()
+}
+
+publishing{
+    publications{
+        register<MavenPublication>("release"){
+            afterEvaluate{
+                from(components["release"])
+            }
         }
     }
 }
