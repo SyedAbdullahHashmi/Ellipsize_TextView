@@ -24,3 +24,5 @@ A custom `TextView` for Android that ellipsizes each line individually.
         android:text="This is a long line 1 that ncscseeds  to  be truncated
          This is a long line 2 that also needs truncation"
         android:textAppearance="?attr/textAppearanceBody1" />
+
+[![](https://jitpack.io/v/SyedAbdullahHashmi/Ellipsize_TextView.svg)](https://jitpack.io/#SyedAbdullahHashmi/Ellipsize_TextView)
