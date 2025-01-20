@@ -62,8 +62,8 @@ publishing {
                 from(components["release"])
             }
             artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
-            groupId = "com.example.ellipsizetextview"
-            artifactId = "ellipsizetextview"
+            groupId = "com.example.SyedAbdullahHashmi"
+            artifactId = "Ellipsize_TextView"
             version = "1.0.0"
 
             pom {
