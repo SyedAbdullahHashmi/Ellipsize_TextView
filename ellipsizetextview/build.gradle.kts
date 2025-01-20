@@ -58,7 +58,9 @@ dependencies {
 publishing {
     publications {
         create("release", MavenPublication::class) {
-            from(components["release"])
+            afterEvaluate {
+                from(components["release"])
+            }
             artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
             groupId = "com.example.ellipsizetextview"
             artifactId = "ellipsizetextview"
