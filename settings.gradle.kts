@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LibApp"
 include(":app")
-include(":ellipsizetextview")
+// include(":ellipsizetextview")
