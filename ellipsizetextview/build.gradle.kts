@@ -58,14 +58,14 @@ dependencies {
 publishing {
     publications {
         create("release", MavenPublication::class) {
-            afterEvaluate {
-                from(components["release"])
-            }
+
             artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
             groupId = "com.example.SyedAbdullahHashmi"
             artifactId = "Ellipsize_TextView"
             version = "1.0.0"
-
+            afterEvaluate {
+                from(components["release"])
+            }
             pom {
                 name.set("LibApp")
                 description.set("A custom TextView for Android that ellipsizes each line individually.")
