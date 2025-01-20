@@ -43,6 +43,11 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
+    publishing{
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -67,7 +72,7 @@ publishing {
                 from(components["release"])
             }
             pom {
-                name.set("LibApp")
+                name.set("ellipsizetextview")
                 description.set("A custom TextView for Android that ellipsizes each line individually.")
                 url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
                 licenses {
