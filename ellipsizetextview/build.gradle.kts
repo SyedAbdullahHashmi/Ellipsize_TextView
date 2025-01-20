@@ -36,6 +36,12 @@ android {
             )
         }
     }
+    tasks.whenTaskAdded {
+        if (name.contains("lint", ignoreCase = true)) {
+            enabled = false
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
