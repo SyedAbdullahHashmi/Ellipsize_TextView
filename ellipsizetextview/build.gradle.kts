@@ -8,9 +8,9 @@ publishing {
     publications {
         create<MavenPublication>("release") {
             artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
-            groupId = "com.github.SyedAbdullahHashmi"
-            artifactId = "Ellipsize_TextView"
-            version = "1.0.4"
+            groupId = "com.example.ellipsizetextview"
+            artifactId = "ellipsizetextview"
+            version = "1.0.0"
 
             pom {
                 name.set("LibApp")
