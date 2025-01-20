@@ -3,42 +3,42 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
+                groupId = "com.example.ellipsizetextview"
+                artifactId = "ellipsizetextview"
+                version = "1.0.0"
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            artifact("$buildDir/outputs/aar/ellipsizetextview-release.aar") // Adjust if needed
-            groupId = "com.example.ellipsizetextview"
-            artifactId = "ellipsizetextview"
-            version = "1.0.0"
-
-            pom {
-                name.set("LibApp")
-                description.set("A custom TextView for Android that ellipsizes each line individually.")
-                url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
-                licenses {
-                    license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                    }
-                }
-                developers {
-                    developer {
-                        id.set("SyedAbdullahHashmi")
-                        name.set("Syed Abdullah Hashmi")
-                        email.set("abdullah.hashmi24@gmail.com")
-                    }
-                }
-                scm {
-                    connection.set("scm:git:git://github.com/SyedAbdullahHashmi/Ellipsize_TextView.git")
-                    developerConnection.set("scm:git:ssh://github.com:SyedAbdullahHashmi/Ellipsize_TextView.git")
+                pom {
+                    name.set("LibApp")
+                    description.set("A custom TextView for Android that ellipsizes each line individually.")
                     url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
+                    licenses {
+                        license {
+                            name.set("The Apache License, Version 2.0")
+                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        }
+                    }
+                    developers {
+                        developer {
+                            id.set("SyedAbdullahHashmi")
+                            name.set("Syed Abdullah Hashmi")
+                            email.set("abdullah.hashmi24@gmail.com")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:git://github.com/SyedAbdullahHashmi/Ellipsize_TextView.git")
+                        developerConnection.set("scm:git:ssh://github.com:SyedAbdullahHashmi/Ellipsize_TextView.git")
+                        url.set("https://github.com/SyedAbdullahHashmi/Ellipsize_TextView")
+                    }
                 }
             }
         }
     }
 }
-
 android {
     namespace = "com.example.ellipsizetextview"
     compileSdk = 35
