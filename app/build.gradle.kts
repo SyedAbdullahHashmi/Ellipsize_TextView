@@ -59,4 +59,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 //    implementation (project(":ellipsizetextview"))
+    implementation ("com.github.SyedAbdullahHashmi:Ellipsize_TextView:-SNAPSHOT")
 }
