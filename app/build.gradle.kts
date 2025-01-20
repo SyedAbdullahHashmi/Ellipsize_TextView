@@ -46,6 +46,11 @@ android {
         abortOnError = false
     }
 
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
 }
 
 dependencies {
@@ -58,6 +63,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-//    implementation (project(":ellipsizetextview"))
-    implementation ("com.github.SyedAbdullahHashmi:Ellipsize_TextView:-SNAPSHOT")
+    implementation (project(":ellipsizetextview"))
+//    implementation ("com.github.SyedAbdullahHashmi:Ellipsize_TextView:-SNAPSHOT")
 }
