@@ -9,7 +9,7 @@ A custom `TextView` for Android that ellipsizes each line individually.
 ## How to Use
 1. Add the library to your project:
    ```gradle
-   implementation 'com.example:ellipsizingtextview:1.0.0'
+   implementation 'com.example:ellipsizingtextview:1.1.0'
 2. Use EllipsizingTextView in your layout example:
    ```
    <com.example.ellipsizetextview.EllipsizeTextView
